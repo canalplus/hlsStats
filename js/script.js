@@ -49,7 +49,7 @@ var analyzeValues = function(){
 	maxValues.forEach(function(val){
 		if(val.value < ref){
 			var date = val.ts.getHours().pad(2)+":"+val.ts.getMinutes().pad(2)+":"+val.ts.getSeconds().pad(2)
-			$('#errors').append("["+date+"] Rollback de chunk (ID de "+val.ref+" à "+val.value+")");
+			$('#errors').append("["+date+"] Rollback de chunk (ID de "+val.ref+" à "+val.value+")<br/>");
 		}
 		ref = val.value;
 	});
