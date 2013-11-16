@@ -47,8 +47,8 @@ var fetchValues = function(){
 			var ts = new Date();
 			maxValues.push({ts:ts, value:res.max});
 			minValues.push({ts:ts, value:res.min});
-			maxValues = maxValues.slice(maxValues.length-20, maxValues.length);
-			minValues = minValues.slice(minValues.length-20, minValues.length);
+			maxValues = maxValues.slice(Math.max(0, maxValues.length-20), maxValues.length);
+			minValues = minValues.slice(Math.max(0, minValues.length-20), minValues.length);
 		}
 		
 		plotValues();
