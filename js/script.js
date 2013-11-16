@@ -1,5 +1,6 @@
 maxValues = [];
 minValues = [];
+rollbacks = {};
 
 Number.prototype.pad = function (len) {
     return (new Array(len+1).join("0") + this).slice(-len);
@@ -48,11 +49,19 @@ var analyzeValues = function(){
 	var ref = 0;
 	maxValues.forEach(function(val){
 		if(val.value < ref){
-			var date = val.ts.getHours().pad(2)+":"+val.ts.getMinutes().pad(2)+":"+val.ts.getSeconds().pad(2)
-			$('#errors').append("["+date+"] Rollback de chunk (ID de "+val.ref+" à "+val.value+")<br/>");
+			rollbacks[val.ts.getTime()] = {from: ref, to: val.value};
 		}
 		ref = val.value;
 	});
+}
+
+var displayRollbacks = function(){
+	Object.keys(rollbacks).forEach(function(_ts){
+		var ts = new Date(parseInt(_ts));
+		var date = ts.getHours().pad(2)+":"+ts.getMinutes().pad(2)+":"+ts.getSeconds().pad(2);
+		$('#errors').append("["+date+"] Rollback de chunk (ID de "+rollbacks[_ts].from+" -> "+rollbacks[_ts].to+")<br/>");
+	});
+
 }
 
 var fetchValues = function(){
@@ -67,5 +76,6 @@ var fetchValues = function(){
 		
 		plotValues();
 		analyzeValues();
+		displayRollbacks();
 	})
 }
