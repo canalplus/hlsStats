@@ -22,27 +22,19 @@
 
     <div class="container">
 
-
-      
-
-
       <div class="alert alert-info">
         Saisir une adresse vers une playlist HLS (finale).<br/>
         Ex (smartjog): <code>http://95.81.147.22/1UiTMoAEJhLuAXYZ36zLq1evYy_8cjr661Og=/7182/hlsdvr/canalplus-hd-andr7/r7-hd/canalplus-hd-video=3400000.m3u8</code>.<br/>
         Ex (sortie CDN C+ Origin): <code>http://webtv-live1.canal-bis.com/live/hlsdvr/canalplus-hd-andr7/r7-hd/canalplus-hd-video=3400000.m3u8</code>
       </div>
 
-
       <form id="genForm" class="form-horizontal" method="post">
-
-
         <div class="control-group">
           <label class="control-label" for="inputUrl">URL du flux HLS</label>
           <div class="controls">
             <input class="input-xxlarge" name="inputUrl" id="inputUrl" type="text" placeholder="">
           </div>
         </div>
-
         <div class="control-group">
           <div class="controls">
             <button type="button" id="analyzeBtn" class="btn">Analyser</button>
@@ -52,13 +44,12 @@
     </div>
 
     <div class="container">
-
       <canvas id="graph" width="940px" height="300px"></canvas>
-
-
     </div>
 
-
+    <div class="container">
+      <div id="error" class="alert alert-error"></div>
+    </div>
 
     <div class="navbar-fixed-bottom">
       <hr/>

@@ -44,6 +44,18 @@ var plotValues = function(){
 
 }
 
+var analyzeValues = function(){
+	var ref = 0;
+	maxValues.forEach(function(val){
+		if(val.value < ref){
+			var date = val.ts.getHours().pad(2)+":"+val.ts.getMinutes().pad(2)+":"+val.ts.getSeconds().pad(2)
+			$('#errors').append("["+date+"] Rollback de chunk (ID de "+val.ref+" à "+val.value+")");
+		}
+		ref = val.value;
+	});
+}
+
+
 var fetchValues = function(){
 	$.post("./getStats.php", {"url": url} ,function(res){
 		if(res && res.min && res.max){
@@ -55,5 +67,6 @@ var fetchValues = function(){
 		}
 		
 		plotValues();
+		analyzeValues();
 	})
 }
