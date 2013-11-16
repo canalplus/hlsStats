@@ -1,6 +1,9 @@
 maxValues = [];
 minValues = [];
-url = "http://95.81.147.22/1UiSsTgEJDqA2aKSwMDxVLZVBtO32FwwVEoQ=/7186/hlsdvr/canalplusdecale-hd-andr7/r7-hd/canalplusdecale-hd-video=3400000.m3u8";
+
+Number.prototype.pad = function (len) {
+    return (new Array(len+1).join("0") + this).slice(-len);
+}
 
 $(document).ready(function(){
 
@@ -15,7 +18,7 @@ $("#analyzeBtn").click(function(){
 var plotValues = function(){
 	var ctx = document.getElementById("graph").getContext("2d");
 	var data = {
-		labels : maxValues.map(function(e){return e.ts.getHours()+":"+e.ts.getMinutes()+":"+e.ts.getSeconds()}),
+		labels : maxValues.map(function(e){return e.ts.getHours().pad(2)+":"+e.ts.getMinutes().pad(2)+":"+e.ts.getSeconds().pad(2)}),
 		datasets : [
 			{
 				fillColor : "rgba(220,220,220,0)",
