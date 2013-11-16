@@ -1,0 +1,290 @@
+/*
+----------------------------------------
+USUAL PROPERTIES FOR R7 ADMIN PAGES 
+----------------------------------------
+*/
+
+/* FONTS */
+@font-face
+{
+	font-family: "CdemRom";
+	src: url("../font/CanalDemiRomainG7.otf") format("opentype");
+}	
+@font-face
+{
+	font-family: "ClightRom";
+	src: url("../font/CanalLightRomainR7.otf") format("opentype");
+}
+@font-face
+{
+	font-family: "CboldRom";
+	src: url("../font/CanalBoldRomain2012.otf") format("opentype");
+}
+
+/* DOM PROPERTIES */
+body
+{
+	font-family: Arial;
+	padding-top: 68px;
+	padding-bottom: 40px;
+}
+
+/* CHECKBOXES */
+.checkButtons .btn
+{
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+.choices .title
+{
+	list-style-type: none;
+}
+
+	.choices .title:before
+	{
+		content: "->  ";
+	}
+
+.choice
+{
+	list-style-type: none;
+}
+
+	.choice .name:before
+	{
+		width: 40px;
+		content: "\F008";
+		font-family: CdemRom;
+	}
+
+	.choice.active .name:before
+	{
+		width: 40px;
+		content: "\F007";
+		font-family: CdemRom;
+	}
+
+	.choice .ip
+	{
+		padding-left: 40px;
+	}
+
+	.choice[level="0"], .choices .title[level="1"]
+	{
+		padding-left: 10px;
+	}
+	.choice[level="1"], .choices .title[level="2"]
+	{
+		padding-left: 20px;
+	}
+	.choice[level="2"]
+	{
+		padding-left: 30px;
+	}
+
+
+
+
+
+
+/* FORM SIGNIN */
+.form-signin .brand
+{
+	font: normal 31px/35px "ClightRom";
+	-webkit-font-smoothing: antialiased;
+	color: #888;
+	padding-top:10px;
+}
+
+.form-signin h2
+{
+	font: normal 18px/24px "ClightRom";
+	font-family: "CdemRom";
+	-webkit-font-smoothing: antialiased;
+	text-transform: uppercase;
+	color: rgb(26, 26 ,26);
+}
+
+.btn-large
+{
+	font-family: arial;
+	border-radius: 3px;
+}
+
+
+/* NAVBAR */
+.navbar-inverse .navbar-inner
+{
+	background-color: rgb(26, 26 ,26);
+	font-size: 12px;
+}
+
+.navbar-inner .dropdown-toggle .name
+{	
+	display: inline-block;
+	width: 74px;
+	padding-right: 6px;
+	-webkit-font-smoothing: antialiased;
+	font: normal 12px "CdemRom";
+	text-transform: uppercase;
+}
+
+.navbar-inverse .brand
+{
+	font-family: "ClightRom";
+	-webkit-font-smoothing: antialiased;
+	color: #888;
+	margin-top: 8px;
+	text-transform: uppercase;
+}
+
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a, .dropdown-menu li.active > a:hover, .dropdown-menu li.active > a
+{
+	background-color: #0051a2;
+	background-image: none;
+	color: white;
+}
+
+.navbar .nav > li
+{
+	border-left: 1px solid #262626;
+}
+.navbar .nav > li > a
+{
+	line-height: 13px;
+	font-family: "CdemRom";
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	text-transform: uppercase;
+	padding: 14px 15px;
+}
+.navbar .nav > li > p.user
+{
+	line-height: 13px;
+	padding: 14px 15px 0px;
+}
+
+.navbar .btn-group .btn
+{
+	margin-top: 4px;
+}
+
+.navbar-inverse .navbar-link
+{
+	color: #fff;
+}
+.navbar-inverse .navbar-logout
+{
+	font-family: "CboldRom";
+	-webkit-font-smoothing: antialiased;
+	color: #fff;
+	padding: 4px 6px;
+	margin-left: 10px;
+	background-image: -webkit-linear-gradient(bottom, rgb(48,48,48) 0%, rgb(64,64,64) 100%);
+	border-radius: 1px;
+}
+.navbar-inverse .navbar-logout:hover, .navbar-inverse .navbar-logout:active
+{
+	text-decoration:none;
+	background-image: -webkit-linear-gradient(top, rgb(48,48,48) 0%, rgb(64,64,64) 100%);
+}
+.navbar-inverse .navbar-logout:active
+{
+	background-image: -webkit-linear-gradient(top, rgb(40,40,40) 0%, rgb(56,56,56) 100%);
+}
+
+
+/* SIDEBAR */
+.sidebar-nav 
+{
+	padding: 9px 0;
+}
+
+.well
+{
+	background-color: #eeeeee;
+	border-radius: 2px;
+	border-color: #e2e2e2;
+}
+
+.nav-header
+{
+	color: rgb(46, 46 ,46);
+}
+
+.nav-list
+{
+	padding-right: 14px;
+	padding-left: 14px;
+}
+
+.one-choice > .active, .one-choice > .active :hover
+{
+	background-color: #0051A2;
+}
+
+a
+{
+	color: #005CA9;
+}
+a:hover
+{
+	color: #707070;
+}
+
+
+/* CONTENT */
+h1, h2
+{
+	font-family: "ClightRom";
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	text-transform: uppercase;
+	color: rgb(26, 26 ,26);
+}
+h2
+{
+	margin-bottom: 0;
+}
+.hero-unit
+{
+	border-radius: 4px;
+}
+.btn-small
+{
+	font-size: 13px;
+	padding: 3px 10px;
+}
+
+select
+{
+	font-size: 13px;
+	color: rgb(51,51,51);
+	line-height: 20px;
+	height: 28px;
+}
+
+hr
+{
+	border-top: 1px solid #ddd;
+}
+
+/* Tables table-select */
+.table-selected tbody tr td.active {
+	color: white;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	background-color: #08C;
+}
+
+/* FOOTER */
+footer p
+{
+	font-family: "CdemRom";
+	color: #868686;
+	-webkit-font-smoothing: antialiased;
+	font-size: 10px;
+}
+footer .labs {
+	color: #164193;
+}
