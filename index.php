@@ -48,7 +48,7 @@
     </div>
 
     <div class="container">
-      <div id="error" class="alert alert-error"></div>
+      <div id="errors" class="alert alert-error"></div>
     </div>
 
     <div class="navbar-fixed-bottom">
