@@ -55,7 +55,6 @@ var analyzeValues = function(){
 	});
 }
 
-
 var fetchValues = function(){
 	$.post("./getStats.php", {"url": url} ,function(res){
 		if(res && res.min && res.max){
