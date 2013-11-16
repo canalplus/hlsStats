@@ -56,6 +56,7 @@ var analyzeValues = function(){
 }
 
 var displayRollbacks = function(){
+	$('#errors').html("");
 	Object.keys(rollbacks).forEach(function(_ts){
 		var ts = new Date(parseInt(_ts));
 		var date = ts.getHours().pad(2)+":"+ts.getMinutes().pad(2)+":"+ts.getSeconds().pad(2);
