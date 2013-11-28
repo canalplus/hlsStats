@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,8 +23,6 @@
 
       <div class="alert alert-info">
         Saisir une adresse vers une playlist HLS (finale).<br/>
-        Ex (smartjog): <code>http://95.81.147.22/1UiTMoAEJhLuAXYZ36zLq1evYy_8cjr661Og=/7182/hlsdvr/canalplus-hd-andr7/r7-hd/canalplus-hd-video=3400000.m3u8</code>.<br/>
-        Ex (sortie CDN C+ Origin): <code>http://webtv-live1.canal-bis.com/live/hlsdvr/canalplus-hd-andr7/r7-hd/canalplus-hd-video=3400000.m3u8</code>
       </div>
 
       <form id="genForm" class="form-horizontal" method="post">
